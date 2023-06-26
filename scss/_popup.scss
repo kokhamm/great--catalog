@@ -1,0 +1,19 @@
+.popup {
+    position: fixed;
+    pointer-events: none;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 2rem;
+    img{
+        width: 27.9rem;
+        height: 24.2rem;
+    }
+  }
+  
+  .popup.show {
+    opacity: 1;
+  }
+

@@ -1,0 +1,60 @@
+@use "colors" as c;
+@use "basic" as b;
+
+.problem{
+    &__wrap{
+        padding: 16rem 0;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    &__header{
+        font-size: 4rem;
+        font-weight: 600;
+        max-width: 56rem;
+    }
+    &__body{
+        border-radius: 30px;
+        background: #333;
+        backdrop-filter: blur(15px);
+        padding: 1rem;
+        display: flex;
+        gap: 1rem;
+    }
+    &__item{
+        border-radius: 20px;
+        background: #434343;
+        display: flex;
+        flex-direction: column;
+        img{
+            width: 18.8rem;
+        }
+    }
+    &__down{
+        padding: 0rem 2rem 4rem 2rem;
+    }
+    &__subtext{
+        border-top: 1px solid c.$white;
+        padding-top: 2rem;
+        font-size: 1.6rem;
+        line-height: 120%;
+    }
+    &__bottom{
+        margin-top: 8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+    &__solve{
+        font-size: 4rem;
+        text-align: center;
+        max-width: 52.8rem;
+        font-weight: 600;
+    }
+    &__link{
+        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}

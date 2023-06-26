@@ -1,0 +1,77 @@
+@use "colors" as c;
+@use "basic" as b;
+
+.hero{
+    &::after{
+        content: '';
+        position: absolute;
+        width: 488.77px;
+        height: 581.18px;
+        left: 0;
+        top: 278.67px;
+        background: url('../img/gc-hero-green.webp') no-repeat;
+        background-size: contain;
+        filter: blur(200px);
+        -webkit-filter: blur(200px);
+        transform: translate3d(0, 0, 0);
+        z-index: -1;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        width: 800px;
+        height: 636px;
+        left: 669px;
+        bottom: 0px;
+        background: url('../img/gc-hero-collage.webp') no-repeat;
+        background-size: contain;
+    }
+    background: url('../img/gc-hero-bg.webp') no-repeat top;
+    background-size: cover;
+    &__wrap{
+        display: flex;
+        padding: 12rem 0;
+        height: 100vh;
+        flex-direction: column;
+        gap: 12rem;
+        a{
+            width: max-content;
+            margin: 0 auto;
+        }
+    }
+    &__intro{
+        max-width: 60rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        padding-top: 16rem;
+    }
+    &__header{
+        font-weight: 700;
+        font-size: 6rem;
+        line-height: 110%;
+    }
+    &__paragraph{
+        font-size: 3rem;
+    }
+    &__more{
+        margin: 0 auto;
+        display: flex;
+        transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        &:hover{
+            transform: scale(1.1);
+        }
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        border-radius: 30px;
+        &-text{
+            font-size: 2rem;
+        }
+    }
+}

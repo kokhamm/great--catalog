@@ -1,0 +1,62 @@
+@use "colors" as c;
+@use "basic" as b;
+
+.header{
+    position: fixed;
+    top: 4rem;
+    width: 100%;
+    z-index: 1000;
+    &__wrap{
+        align-items: center;
+        justify-content: space-between;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(3rem);
+        border-radius: 50rem;
+        padding: 2rem 3rem;
+    }
+    &__nav{
+        display: flex;
+        gap: 4rem;
+    }
+    &__link,
+    &__lang{
+        @include b.fs16;
+        transition: b.$t05;
+        &:hover{
+            color: c.$orange;
+        }
+    }
+    &__lang.active{
+        color: c.$orange
+    }
+    &__right{
+        display: flex;
+        gap: 4rem;
+        align-items: center;
+    }
+    &__languages{
+        display: flex;
+    }
+    &__lang:nth-child(even){
+        padding: 0 1.4rem;
+        border-left: 0.1rem solid c.$white;
+        border-right: 0.1rem solid c.$white;
+    }
+    &__lang:first-child{
+        padding-right: 1.4rem;
+    }
+    &__lang:last-child{
+        padding-left: 1.4rem;
+    }
+    &__sale{
+        @include b.fs16;
+        background-color: c.$orange;
+        padding: 1rem 3rem;
+        border-radius: 2rem;
+        transition: b.$t1;
+        box-shadow: 0px 0.8rem 1rem rgba(0, 0, 0, 0.25);
+        &:hover{
+            box-shadow: none;
+        }
+    }
+}

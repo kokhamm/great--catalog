@@ -1,0 +1,62 @@
+@use "colors" as c;
+@use "basic" as b;
+
+.premium{
+    &__wrap{
+        padding: 16rem 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+    &__header{
+        font-size: 5rem;
+        font-weight: 600;
+        max-width: 81rem;
+        text-align: center;
+        span{
+            color: c.$orange;
+        }
+    }
+    &__bottom{
+        border-radius: 30px;
+        background: rgba(255, 255, 255, 0.10);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+    &__paragraph{
+        font-size: 2rem;
+        font-weight: 500;
+        span{
+            color: c.$orange;
+        }
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 68.2rem;
+        height: 56rem;
+        top: 0;
+        left: 25%;
+        background: url('../img/gc-premium-gradi.webp') no-repeat;
+        background-size: contain;
+        filter: blur(200px);
+        -webkit-filter: blur(200px);
+        transform: translate3d(0, 0, 0);
+        z-index: -1;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        left: 12rem;
+        width: 60rem;
+        height: 59rem;
+        top: 0;
+        background: url('../img/gc-premium-hexa.svg') no-repeat;
+        background-size: contain;
+        z-index: -1;
+    }
+}

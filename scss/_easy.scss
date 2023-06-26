@@ -1,0 +1,87 @@
+@use "colors" as c;
+@use "basic" as b;
+
+.easy{
+    &__wrap{
+        padding: 16rem 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 8rem;
+    }
+    &__header{
+        font-size: 4rem;
+        font-weight: 600;
+        max-width: 58.4rem;
+        text-align: center;
+    }
+    iframe{
+        border-radius: 3rem;
+    }
+    &__note-block{
+        pointer-events: none;
+        border-radius: 20px;
+        background: rgba(67, 67, 67, 0.50);
+        backdrop-filter: blur(50px);
+        -webkit-backdrop-filter: blur(50px);
+        padding: 4rem;
+        position: absolute;
+        white-space: initial;
+        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        &:nth-child(2){
+            max-width: 31.9rem;
+            top: 0;
+            left: 0;
+            transform: translate(-20rem, 3rem);
+        }
+        &:nth-child(3){
+            max-width: 31.5rem;
+            bottom: 0;
+            left: 0;
+            transform: translate(-13rem, -6rem);
+        }
+        &:nth-child(4){
+            max-width: 26.8rem;
+            top: 0;
+            right: 0;
+            transform: translate(16rem, 8rem);
+        }
+        &:nth-child(5){
+            max-width: 38.6rem;
+            bottom: 0;
+            right: 0;
+            transform: translate(21rem, -3rem);
+        }
+    }
+    &__note{
+        font-size: 2rem;
+        line-height: 120%;
+    }
+    &__body{
+        position: relative;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 51.1rem;
+        height: 66.5rem;
+        top: -185px;
+        right: 0;
+        background: url('../img/gc-easy-gradi.webp') no-repeat;
+        background-size: contain;
+        filter: blur(200px);
+        -webkit-filter: blur(200px);
+        transform: translate3d(0, 0, 0);
+        z-index: -1;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 51.1rem;
+        height: 66.5rem;
+        top: 0;
+        background: url('../img/gc-easy-hexa.svg') no-repeat;
+        background-size: contain;
+        z-index: -1;
+    }
+}

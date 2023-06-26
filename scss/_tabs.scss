@@ -1,0 +1,86 @@
+@use "colors" as c;
+@use "basic" as b;
+
+.tabs {
+    &::before{
+        content: '';
+        position: absolute;
+        width: 50.8rem;
+        height: 66.9rem;
+        background: url('../img/gc-gallary-hexa.svg') no-repeat;
+        background-size: contain;
+        z-index: -1;
+        top: 39.6rem;
+        left: 0;
+    }
+    &__head {
+        display: flex;
+        justify-content: flex-start;
+        gap: 2rem;
+        padding-bottom: 6rem;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding-top: 3rem;
+        border-top: 1px solid #6A6A6A;
+    }
+    &__head-item {
+        font-size: 1.6rem;
+        padding: 1.4rem 3rem;
+        border-radius: 22px;
+        border: none;
+        background-color: #6A6A6A;
+        color: c.$white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        &.active {
+            background-color: c.$green;
+        }
+    }
+    &__content {
+        left: 0;
+      .tabs__content-item {
+        display: none;
+        &.active {
+          display: block;
+          flex-direction: column;
+          gap: 2rem;
+          overflow: scroll;
+        }
+      }
+    }
+    &__heading{
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    &__wrap{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 160px 0px;
+    }
+    &__header{
+        font-size: 40px;
+        font-weight: 600;
+        max-width: 42.4rem;
+        padding-bottom: 3rem;
+    }
+    &__shelf{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        &:first-child{
+            padding-left: 1rem;
+            margin-bottom: 2rem;
+        }
+        &:last-child{
+            transform: translateX(-100px);
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            border-radius: 30px;
+        }
+    }
+  }
+  

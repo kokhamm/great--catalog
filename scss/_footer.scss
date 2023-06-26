@@ -1,0 +1,71 @@
+@use "colors" as c;
+@use "basic" as b;
+
+.footer{
+    &__wrap{
+        padding: 8rem 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+    &__bottom p{
+        font-size: 1.4rem;
+        max-width: 42.6rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+    &__top{
+        display: flex;
+        align-items: center;
+        gap: 18.5rem;
+    }
+    &__right{
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+    }
+    &__item a{
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #333333;
+        border-radius: 50rem;
+        transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        svg{
+            transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        &:hover{
+            background-color: initial;
+            svg{
+                transform: scale(1.6);
+            }
+        }
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 57.1rem;
+        height: 58.2rem;
+        left: 0;
+        bottom: 0;
+        background: url('../img/gc-footer-gradi.svg') no-repeat;
+        background-size: contain;
+        filter: blur(200px);
+        -webkit-filter: blur(200px);
+        transform: translate3d(0, 0, 0);
+        z-index: -1;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 49.1rem;
+        height: 59.8rem;
+        bottom: 0;
+        background: url('../img/gc-footer-hexa.svg') no-repeat;
+        background-size: contain;
+        z-index: -1;
+    }
+}

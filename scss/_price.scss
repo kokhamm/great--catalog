@@ -1,0 +1,186 @@
+@use "colors" as c;
+@use "basic" as b;
+
+
+.price{
+    &::before{
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 53.8543rem;
+        height: 60.2677rem;
+        top: 50rem;
+        background: url('../img/gc-price-hexa.svg') no-repeat;
+        background-size: contain;
+    }
+    &__wrap{
+        padding: 16rem 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+    &__header{
+        font-size: 4rem;
+        font-weight: 600;
+    }
+    &__nav{
+        border-radius: 40px;
+        background: #6A6A6A;
+        padding: 0.4rem;
+        display: flex;
+        z-index: 0;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            width: 17rem;
+            height: 4.4rem;
+            border-radius: 30px;
+            background: c.$orange;
+            z-index: -1;
+            transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transform: none;
+        }
+    }
+    &__nav.translate{
+        &::before{
+            transform: translate(100%);
+        }
+    }
+    &__tab {
+        width: 17rem;
+        padding: 1rem 4rem;
+        border-radius: 3rem;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 120%;
+        text-align: center;
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    &__tab--active {
+        opacity: 1;
+    }
+    &__content {
+        display: none;
+    }
+    &__content--active {
+        display: block;
+    }
+    &__packages{
+        display: flex;
+        width: 100%;
+        gap: 2rem;
+    }
+    &__plan{
+        flex: 1 1 0px;
+        border-radius: 30px;
+        background: radial-gradient(202.37% 244.04% at 50.00% 272.74%, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.00) 100%), rgba(244, 244, 244, 0.05);
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        &:first-child{
+            .price__bottom{
+                margin-bottom: 2rem;
+            }
+            .price__link{
+                background-color: c.$green;
+            }
+        }
+        &:last-child{
+            backdrop-filter: blur(12.5px);
+            -webjit-backdrop-filter: blur(12.5px);
+            background: radial-gradient(202.37% 244.04% at 50.00% 272.74%, rgba(0, 185, 167, 0.50) 0%, rgba(0, 185, 167, 0.00) 100%), rgba(0, 185, 167, 0.05);
+            .price__type{
+                border: 1px solid c.$green;
+            }
+            .price__sale{
+                background-color: c.$green;
+                color: c.$white;
+            }
+            .price__economy{
+                span{
+                    color: c.$green;
+                }
+            }
+        }
+    }
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__type{
+        font-size: 1.6rem;
+        padding: 0.8rem 1.6rem;
+        border-radius: 25px;
+        border: 1px solid c.$white;
+    }
+    &__center{
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    &__copacity{
+        font-size: 6rem;
+        font-weight: 300;
+    }
+    &__for{
+        color: #A4A4A4;
+        font-size: 1.2rem;
+    }
+    &__mid{
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        height: 100%;
+    }
+    &__advantage{
+        border-radius: 8.333px;
+        background: rgba(244, 244, 244, 0.10);
+        padding: 0.8rem;
+        display: flex;
+        width: 100%;
+        gap: 0.8rem;
+        align-items: center;
+        svg {
+            flex-shrink: 0;
+          }
+    }
+    &__link{
+        border-radius: 8.333px;
+        background: #6A6A6A;
+        padding: 1.2rem 3rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        width: 100%;
+        text-align: center;
+        transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+    &__bottom{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 1rem;
+        align-self: flex-end;
+    }
+    &__sale{
+        border-radius: 25px;
+        background: c.$white;
+        padding: 0.8rem 1.6rem;
+        color: #222;
+        font-size: 1.6rem;
+    }
+    &__economy{
+        font-size: 1.2rem;
+        color: #A4A4A4;
+        span{
+            color: c.$white;
+        }
+    }
+}

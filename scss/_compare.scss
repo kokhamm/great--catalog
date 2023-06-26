@@ -1,0 +1,120 @@
+@use "colors" as c;
+@use "basic" as b;
+
+.compare{
+    &__wrap{
+        padding: 16rem 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 10rem;
+    }
+    &__header{
+        font-weight: 600;
+        font-size: 4rem;
+    }
+    &__bottom{
+        display: flex;
+        gap: 5rem;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 0px;
+        position: relative;
+        transition: 3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transform: translateY(250px);
+        &:first-child img{
+            width: 10rem;
+            height: 11.2rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+        }
+        &:nth-child(2) img{
+            width: 10.3rem;
+            height: 10.3rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+        }
+        &:nth-child(3) img{
+            width: 8.7rem;
+            height: 8.7rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+        }
+        &:nth-child(3) .compare__name{
+            background-color: c.$orange;
+            color: c.$white;
+        }
+        &:nth-child(1){
+            transition-delay: 0.6s;
+        }
+        &:nth-child(2){
+            transition-delay: 0.4s;
+        }
+        &:nth-child(3){
+            border: 1px solid c.$orange;
+            border-radius: 30px;
+            transition-delay: 0.2s;
+        }
+    }
+    &__item.is-inview{
+        transform: none;
+    }
+    &__name{
+        color: #222;
+        font-size: 3rem;
+        font-weight: 600;
+        padding: 3rem 4rem;
+        background-color: c.$white;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+    &__down{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        background-color: #333333;
+    }
+    &__point{
+        padding: 2rem 3rem;
+        background-color: #434343;
+        border-radius: 20px;
+        @include b.fs16;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 37.7rem;
+        height: 61.3rem;
+        top: 0;
+        right: 0;
+        background: url('../img/gc-compare-gradi.webp') no-repeat;
+        background-size: contain;
+        filter: blur(200px);
+        -webkit-filter: blur(200px);
+        transform: translate3d(0, 0, 0);
+        z-index: -1;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        width: 42.9rem;
+        height: 65.8rem;
+        left: 0;
+        top: 42.9rem;
+        background: url('../img/gc-compare-hexa.svg') no-repeat;
+        background-size: contain;
+        z-index: -1;
+    }
+}

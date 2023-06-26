@@ -1,0 +1,69 @@
+@use "colors" as c;
+@use "basic" as b;
+
+.is{
+    &__wrap{
+        padding: 16rem 0;
+        align-items: center;
+        flex-direction: column;
+        gap: 4rem;
+    }
+    &__header{
+        font-size: 4rem;
+        font-weight: 600;
+    }
+    &__body{
+        border-radius: 30px;
+        background: #333;
+        backdrop-filter: blur(15px);
+        padding: 1rem;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+    &__item{
+        padding: 3rem 3.2rem;
+        border-radius: 20px;
+        background: #434343;
+        display: flex;
+        transition: 5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        flex-direction: column;
+        gap: 2rem;
+    }
+    &__text{
+        font-size: 10rem;
+        font-weight: 300;
+        span{
+            font-size: 3rem;
+        }
+    }
+    &__subtext{
+        font-size: 2rem;
+        line-height: 120%;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 27.1rem;
+        height: 70.5rem;
+        top: -40rem;
+        left: 0;
+        background: url('../img/gc-is-gradi.webp') no-repeat;
+        background-size: contain;
+        filter: blur(200px);
+        -webkit-filter: blur(200px);
+        transform: translate3d(0, 0, 0);
+        z-index: -1;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 55.4rem;
+        height: 68.7rem;
+        top: 0px;
+        background: url('../img/gc-is-hexa.svg') no-repeat;
+        background-size: contain;
+        z-index: -1;
+    }
+}

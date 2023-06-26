@@ -1,0 +1,75 @@
+@use "colors";
+
+// regular text mixin
+
+@mixin fs16{
+    font-size: 16px;
+    line-height: 120%;
+}
+
+$t05: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+$t1: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+[data-load-container] {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+}
+
+
+body{
+    font-family: 'Gilroy';
+    font-weight: 500;
+    color: colors.$white;
+    background-color: colors.$grey;
+    overflow-x: hidden;
+    position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+}
+
+html{
+    font-size: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+[class*="__container-l"]{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+[class*="__container-m"]{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+[class*="__wrap"]{
+    display: flex;
+}
+
+.animation-loco{
+    transition: 2.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: translateY(200px);
+    transition-delay: 0.2s;
+    opacity: 0.5;
+}
+
+.animation-loco.is-inview{
+    transform: none;
+    opacity: 1;
+}
