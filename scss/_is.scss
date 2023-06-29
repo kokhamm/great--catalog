@@ -29,6 +29,21 @@
         transition: 5s cubic-bezier(0.165, 0.84, 0.44, 1);
         flex-direction: column;
         gap: 2rem;
+        &:nth-child(1){
+            min-width: 226.15px;
+        }
+        &:nth-child(2){
+            min-width: 258.95px;
+        }
+        &:nth-child(3){
+            min-width: 218.63;
+        }
+        &:nth-child(4){
+            min-width: 142.05px;
+        }
+        &:nth-child(5){
+            min-width: 294.23px;
+        }
     }
     &__text{
         font-size: 10rem;

@@ -11,9 +11,16 @@
         width: 27.9rem;
         height: 24.2rem;
     }
+    svg{
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      cursor: pointer;
+    }
   }
   
   .popup.show {
     opacity: 1;
+    pointer-events: all;
   }
 

@@ -56,16 +56,18 @@
         font-size: 3rem;
     }
     &__more{
+        animation: wave 2s ease-in-out infinite;
         margin: 0 auto;
         display: flex;
         transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
         &:hover{
-            transform: scale(1.1);
+            background-color: c.$orange;
         }
         justify-content: center;
         gap: 20px;
         align-items: center;
         padding: 10px;
+        padding-right: 22px;
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(30px);
         -webkit-backdrop-filter: blur(30px);
@@ -73,5 +75,25 @@
         &-text{
             font-size: 2rem;
         }
+    }
+    @keyframes wave {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px); /* Adjust the vertical distance as needed */
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+}
+
+@media (min-width:1900px) {
+    .hero::before{
+        left: 50%;
+    }
+    .hero__wrap{
+        height: initial;
     }
 }

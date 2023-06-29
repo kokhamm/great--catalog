@@ -2,15 +2,17 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = $_POST['name'];
   $email = $_POST['email'];
+  $phoen = $_POST['phone'];
   $message = $_POST['message'];
 
   // Set up email recipient and subject
-  $to = 'your-email@example.com';
-  $subject = 'Form Submission';
+  $to = 'oleks.ananiev@gmail.com';
+  $subject = 'Form Submission GC';
 
   // Compose the email body
   $body = "Name: $name\n";
   $body .= "Email: $email\n";
+  $body .= "Phone $phone\n";
   $body .= "Message: $message\n";
 
   // Set up email headers
