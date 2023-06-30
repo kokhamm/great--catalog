@@ -69,3 +69,61 @@
         background-size: contain;
     }
 }
+@media (max-width:1000px) {
+    .format{
+        padding: 10rem 0;
+        &__name{
+            font-size: 2.4rem;
+        }
+        &__block{
+            flex-direction: row;
+            padding: 2rem;
+            width: initial;
+            flex: 1 1 auto;
+            &:nth-child(1){
+                svg{
+                    width: 4.3rem;
+                    height: 4rem;
+                }
+            }
+            &:nth-child(2){
+                svg{
+                    width: 4rem;
+                    height: 4rem;
+                }
+            }
+            &:nth-child(3){
+                svg{
+                    width: 3.1709rem;
+                    height: 4rem;
+                }
+            }
+            &:nth-child(4){
+                svg{
+                    width: 2.3099rem;
+                    height: 4rem;
+                }
+            }
+            &:nth-child(5){
+                margin-right: auto;
+                flex: initial;
+                svg{
+                    width: 3.3333rem;
+                    height: 4rem;
+                }
+            }
+        }
+        &__blocks{
+            flex-wrap: wrap;
+        }
+        &::before{
+            width: 35.2rem;
+            height: 55.1rem;
+            background-size: cover;
+            top: 50%;
+        }
+        &::after{
+            top: 100%;
+        }
+    }
+}

@@ -58,3 +58,50 @@
         }
     }
 }
+@media (max-width: 1000px) {
+    .problem{
+        &__wrap{
+            padding: 10rem 0;
+        }
+        &__header{
+            line-height: 120%;
+        }
+        &__body{
+            background: none;
+            padding: 0;
+            position: relative;
+            padding-bottom: 8rem;
+        }
+        /* the slides */
+        .slick-slide {
+            margin: 0 1rem;
+        }
+        &__slide-wrap{
+            height: 32rem;
+            display: flex;
+        }
+        /* the parent */
+        .slick-list {
+            margin: 0 -1rem;
+        }
+        &__prev{
+            position: absolute;
+            bottom: 0;
+            left: 30%;
+        }
+        &__next{
+            position: absolute;
+            bottom: 0;
+            right: 30%;
+        }
+        &__down{
+            padding: 2rem 3rem 3rem 3rem;
+        }
+        &__item{
+            justify-content: center;
+            img{
+                margin: 0 auto;
+            }
+        }
+    }
+}

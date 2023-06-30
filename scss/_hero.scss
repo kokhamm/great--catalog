@@ -89,11 +89,41 @@
       }
 }
 
-@media (min-width:1900px) {
+@media (min-width:1600px) {
     .hero::before{
         left: 50%;
     }
     .hero__wrap{
         height: initial;
+    }
+}
+@media (max-width:1000px) {
+    .hero{
+        background-size: 220%;
+        &::after{
+            top: 0;
+        }
+        &::before{
+            left: 0;
+            width: 100vw;
+            top: 50%;
+            background: url('../img/gc-mob-collage.webp') no-repeat;
+            background-size: contain;
+        }
+        &__wrap{
+            height: initial;
+            padding-top: 4rem;
+            a{
+                margin-top: 14rem;
+            }
+        }
+        &__header{
+            font-size: 4rem;
+            text-align: center;
+        }
+        &__paragraph{
+            font-size: 2rem;
+            text-align: center;
+        }
     }
 }

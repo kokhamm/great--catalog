@@ -115,3 +115,23 @@
   .input-alt:focus + .input-border-alt {
     width: 100%;
   }
+@media (max-width: 1000px) {
+  .booking{
+    &__wrap{
+      padding: 10rem 0;
+    }
+    &__header{
+      text-align: left;
+    }
+    &__subheader{
+      width: 100%;
+      text-align: left;
+    }
+    &__form-wrap{
+      width: 100%;
+    }
+    form{
+      width: 100%;
+    }
+  }
+}

@@ -119,3 +119,15 @@
         z-index: -1;
     }
 }
+@media (max-width: 1000px) {
+    .faq{
+        &__wrap{
+            padding: 10rem 0;
+            flex-direction: column;
+            gap: 6rem;
+        }
+        &__header{
+            font-size: 4rem;
+        }
+    }
+}

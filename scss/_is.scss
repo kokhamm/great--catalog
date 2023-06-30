@@ -2,6 +2,9 @@
 @use "basic" as b;
 
 .is{
+    &__container-l{
+        max-width: 1250px;
+    }
     &__wrap{
         padding: 16rem 0;
         align-items: center;
@@ -22,7 +25,7 @@
         align-items: center;
     }
     &__item{
-        padding: 3rem 3.2rem;
+        padding: 3rem 3rem;
         border-radius: 20px;
         background: #434343;
         display: flex;
@@ -36,13 +39,13 @@
             min-width: 258.95px;
         }
         &:nth-child(3){
-            min-width: 218.63;
+            min-width: 224.63px;
         }
         &:nth-child(4){
-            min-width: 142.05px;
+            min-width: 145.05px;
         }
         &:nth-child(5){
-            min-width: 294.23px;
+            min-width: 300.23px;
         }
     }
     &__text{
@@ -80,5 +83,22 @@
         background: url('../img/gc-is-hexa.svg') no-repeat;
         background-size: contain;
         z-index: -1;
+    }
+}
+@media (max-width: 1000px) {
+    .is{
+        &__wrap{
+            padding: 10rem 0;
+        }
+        &__header{
+            font-size: 3.8rem;
+        }
+        &__body{
+            flex-direction: column;
+        }
+        &__item{
+            width: 100%;
+            // align-items: center;
+        }
     }
 }

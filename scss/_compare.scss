@@ -23,8 +23,9 @@
         flex-direction: column;
         flex: 1 1 0px;
         position: relative;
+        opacity: 0;
         transition: 3s cubic-bezier(0.165, 0.84, 0.44, 1);
-        transform: translateY(250px);
+        transform: translateY(300px);
         &:first-child img{
             width: 10rem;
             height: 11.2rem;
@@ -67,6 +68,7 @@
     }
     &__item.is-inview{
         transform: none;
+        opacity: 1;
     }
     &__name{
         color: #222;
@@ -117,4 +119,34 @@
         background-size: contain;
         z-index: -1;
     }
+}
+@media (max-width: 1000px) {
+    .compare{
+        &__wrap{
+            padding: 10rem 0;
+        }
+        &__bottom{
+            flex-direction: column;
+        }
+        &__header{
+            text-align: center;
+        }
+        &__item{
+            &:first-child img{
+                transform: translate(0, -50%);
+            }
+            &:nth-child(2) img{
+                transform: translate(0, -50%);
+            }
+            &:nth-child(3) {
+                img{
+                    transform: translate(0, -50%);
+                }
+                .compare__name{
+                    padding-right: 5rem;
+                }
+            }
+        }
+    }
+
 }

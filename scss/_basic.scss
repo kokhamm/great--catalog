@@ -48,6 +48,25 @@ a{
     box-sizing: border-box;
 }
 
+.mob{
+    display: none !important;
+}
+
+@media (max-width:1000px) {
+    .mob{
+        display: initial !important;
+    }
+    .desk{
+        display: none !important;
+    }
+    [class*="__container-l"],
+    [class*="__container-m"]{
+        max-width: initial;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+}
+
 [class*="__container-l"]{
     max-width: 1200px;
     margin: 0 auto;
@@ -65,10 +84,17 @@ a{
 .animation-loco{
     transition: 2.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     transform: translateY(200px);
-    transition-delay: 0.2s;
-    opacity: 0.5;
+    transition-delay: 0.5s;
+    opacity: 0.2;
 }
-
+.animation-loco-opacity{
+    transition: 2.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition-delay: 0.2s;
+    opacity: 0.2;
+}
+.animation-loco-opacity.is-inview{
+    opacity: 1;
+}
 .animation-loco.is-inview{
     transform: none;
     opacity: 1;

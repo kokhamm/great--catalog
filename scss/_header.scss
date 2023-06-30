@@ -60,3 +60,27 @@
         }
     }
 }
+@media (max-width:1000px) {
+    .header{
+        position: relative;
+        &__container-l{
+            padding: 0 2rem;
+        }
+        &__logotype img{
+            width: 18rem;
+            height: 3.8rem;
+        }
+        &__wrap{
+            padding: 1.5rem 2.5rem;
+        }
+        &__mobile{
+            position: absolute;
+            // opacity: 0;
+            top: 0;
+            left: 0;
+            transition: 1s;
+            pointer-events: none; 
+            transform: translateX(-100%);
+        }
+    }
+}
