@@ -696,12 +696,14 @@ a {
     z-index: 99999;
     top: -4rem;
     height: 1000px;
+    pointer-events: none;
     display: flex !important;
     flex-direction: column;
     gap: 4rem;
   }
   .header__mobile.on {
     transform: none;
+    pointer-events: all;
     opacity: 1;
   }
   #checkbox {
