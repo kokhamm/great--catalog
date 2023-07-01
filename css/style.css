@@ -442,6 +442,10 @@ a,
   -webkit-tap-highlight-color: transparent;
 }
 
+.stopper {
+  overflow: hidden;
+}
+
 html {
   font-size: 10px;
 }
@@ -584,6 +588,88 @@ a {
 }
 
 @media (max-width: 1000px) {
+  .header__socials {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+  .header__item a {
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    border-radius: 50rem;
+    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .header__item a svg {
+    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .header__item a:hover {
+    background-color: initial;
+  }
+  .header__item a:hover svg {
+    transform: scale(1.6);
+  }
+  .header__item:nth-child(1) svg {
+    height: 24px;
+    width: 14px;
+  }
+  .header__item:nth-child(2) svg {
+    height: 24px;
+    width: 24px;
+  }
+  .header__item:nth-child(3) svg {
+    height: 24px;
+    width: 19px;
+  }
+  .header__item:nth-child(4) svg {
+    height: 24px;
+    width: 24px;
+  }
+  .header__item:nth-child(5) svg {
+    height: 17px;
+    width: 24;
+  }
+  .header__item:nth-child(6) svg {
+    height: 24px;
+    width: 28px;
+  }
+  .header__languages {
+    justify-content: center;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #F4F4F4;
+  }
+  .header__lang {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  .header__nav {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #F4F4F4;
+  }
+  .header__nav a {
+    font-size: 2.5rem;
+  }
+  .header__tosale {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #F4F4F4;
+  }
+  .header__tosale a {
+    font-size: 2.5rem;
+    padding: 1.5rem 4rem;
+    border-radius: 5rem;
+  }
+  .header__burger, .header__logotype {
+    position: relative;
+    z-index: 999999;
+  }
   .header__container-l {
     padding: 0 2rem;
     position: relative;
@@ -598,6 +684,7 @@ a {
   .header__mobile {
     position: absolute;
     opacity: 0;
+    overflow-y: scroll;
     top: 0;
     left: 0;
     transition: 1s;
@@ -607,7 +694,6 @@ a {
     background-color: #222222;
     padding: 6rem 2rem;
     padding-top: 15rem;
-    left: -2rem;
     top: -4rem;
     height: 1000px;
     display: flex !important;
