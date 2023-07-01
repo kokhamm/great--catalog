@@ -588,6 +588,9 @@ a {
 }
 
 @media (max-width: 1000px) {
+  .header {
+    height: 100vh;
+  }
   .header__socials {
     display: flex;
     justify-content: center;
@@ -688,12 +691,12 @@ a {
     top: 0;
     left: 0;
     transition: 1s;
-    pointer-events: none;
     transform: translateX(-100%);
     width: 100vw;
     background-color: #222222;
     padding: 6rem 2rem;
     padding-top: 15rem;
+    z-index: 99999;
     top: -4rem;
     height: 1000px;
     display: flex !important;

@@ -62,6 +62,7 @@
 }
 @media (max-width:1000px) {
     .header{
+        height: 100vh;
         &__socials{
             display: flex;
             justify-content: center;
@@ -165,12 +166,12 @@
             top: 0;
             left: 0;
             transition: 1s;
-            pointer-events: none; 
             transform: translateX(-100%);
             width: 100vw;
             background-color: #222222;
             padding: 6rem 2rem;
             padding-top: 15rem;
+            z-index: 99999;
             // left: -2rem;
             top: -4rem;
             height: 1000px;
