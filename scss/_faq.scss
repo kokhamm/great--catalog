@@ -129,5 +129,8 @@
         &__header{
             font-size: 4rem;
         }
+        &::before{
+            display: none;
+        }
     }
 }

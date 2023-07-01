@@ -64,7 +64,11 @@
     .premium{
         &__wrap{
             padding: 10rem 0;
-            padding-top: 18rem;
+        }
+        &__header{
+            font-size: 3.2rem;
+            text-align: left;
+            line-height: 120%;
         }
     }
 }

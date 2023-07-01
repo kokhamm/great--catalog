@@ -38,6 +38,15 @@ body{
     }
 }
 
+input,
+textarea,
+button,
+select,
+a,
+.slick-arrow{
+    -webkit-tap-highlight-color: transparent;
+}
+
 html{
     font-size: 10px;
 }
@@ -54,21 +63,6 @@ a{
 
 .mob{
     display: none !important;
-}
-
-@media (max-width:1000px) {
-    .mob{
-        display: initial !important;
-    }
-    .desk{
-        display: none !important;
-    }
-    [class*="__container-l"],
-    [class*="__container-m"]{
-        max-width: initial;
-        margin: 0 auto;
-        padding: 0 2rem;
-    }
 }
 
 [class*="__container-l"]{
@@ -102,4 +96,30 @@ a{
 .animation-loco.is-inview{
     transform: none;
     opacity: 1;
+}
+@media (max-width:1000px) {
+    
+    .mob{
+        display: initial !important;
+    }
+    .desk{
+        display: none !important;
+    }
+    [class*="__container-l"],
+    [class*="__container-m"]{
+        max-width: initial;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+    section,footer{
+        position: relative;
+    }
+    main{
+        width: 100vw;
+        overflow: hidden;
+    }
+    ::after,
+    ::before{
+        max-width: 100vw !important;
+    }
 }

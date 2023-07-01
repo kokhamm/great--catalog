@@ -189,10 +189,12 @@
     .price{
         &__wrap{
             padding: 10rem 0;
-            padding-top: 18rem;
         }
         &__packages{
             flex-direction: column;
+        }
+        &::before{
+            display: none;
         }
     }
 }
