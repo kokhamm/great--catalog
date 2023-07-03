@@ -97,22 +97,23 @@
         height: initial;
     }
 }
-@media (max-width:1000px) {
+@media (max-width:1200px) {
     .hero{
         &__intro{
             padding-top: 10rem;
         }
+        &__wrap{
+            align-items: center;
+        }
         background-size: 220%;
         &::after{
-            top: 0;
-            z-index: 0;
+            display: none;
         }
         &::before{
-            left: 0;
-            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
             top: 50%;
-            background: url('../img/gc-mob-collage.webp') no-repeat;
-            background-size: contain;
+            
         }
         &__wrap{
             height: initial;
@@ -126,8 +127,14 @@
             text-align: center;
         }
         &__paragraph{
-            font-size: 2rem;
+            font-size: 2rem; 
             text-align: center;
         }
+    }
+}
+@media (max-width:700px) {
+    .hero{
+        background: url('../img/gc-mob-collage.webp') no-repeat;
+        background-size: contain;
     }
 }
