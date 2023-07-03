@@ -415,6 +415,11 @@ table {
   width: 100vw;
 }
 
+::after,
+::before {
+  pointer-events: none;
+}
+
 body {
   font-family: "Gilroy";
   font-weight: 500;
@@ -588,6 +593,10 @@ a {
 }
 
 @media (max-width: 1000px) {
+  .header {
+    height: 100vh;
+    overflow: scroll;
+  }
   .header__socials {
     display: flex;
     justify-content: center;
@@ -1054,8 +1063,8 @@ a {
   scrollbar-color: #00B9A7;
 }
 .tabs__content .tabs__content-item.active::-webkit-scrollbar {
-  width: 10px;
-  height: 6px;
+  width: 5px;
+  height: 10px;
   /* Adjust the width as needed */
 }
 .tabs__content .tabs__content-item.active::-webkit-scrollbar-thumb {
@@ -1091,7 +1100,7 @@ a {
   width: 100%;
   background-color: #00b9a7;
   position: absolute;
-  bottom: 162px;
+  bottom: 163px;
 }
 .tabs__header {
   font-size: 40px;
@@ -1103,6 +1112,9 @@ a {
   display: flex;
   align-items: center;
   gap: 2rem;
+  -webkit-user-select: none; /* Safari */ /* IE 10 and IE 11 */
+  -moz-user-select: none;
+       user-select: none; /* Standard syntax */
 }
 .tabs__shelf:first-child {
   padding-left: 1rem;
@@ -1122,12 +1134,7 @@ a {
     padding: 10rem 0;
   }
   .tabs__wrap.is-inview::before {
-    content: "";
-    height: 1px;
-    width: 100%;
-    background-color: #00b9a7;
-    position: absolute;
-    bottom: 102.5px;
+    content: none;
   }
   .tabs__header {
     padding: 0 2rem 2rem 2rem;

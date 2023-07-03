@@ -19,6 +19,10 @@ $t1: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 	width: 100vw;
 }
 
+::after,
+::before{
+        pointer-events: none;
+    }
 
 body{
     font-family: 'Gilroy';

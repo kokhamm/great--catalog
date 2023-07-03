@@ -62,7 +62,8 @@
 }
 @media (max-width:1000px) {
     .header{
-        // height: 100vh;
+        height: 100vh;
+        overflow: scroll;
         &__socials{
             display: flex;
             justify-content: center;
