@@ -62,8 +62,8 @@
 }
 @media (max-width:1000px) {
     .header{
-        height: 100vh;
-        overflow: scroll;
+        // height: 100vh;
+        // overflow: scroll;
         &__socials{
             display: flex;
             justify-content: center;
@@ -185,6 +185,7 @@
             transform: none;
             pointer-events: all;
             opacity: 1;
+            margin-left: -2rem;
         }
     }
     #checkbox {
