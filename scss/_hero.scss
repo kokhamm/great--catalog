@@ -134,7 +134,9 @@
 }
 @media (max-width:700px) {
     .hero{
-        background: url('../img/gc-mob-collage.webp') no-repeat;
+        &::before{
+            background: url('../img/gc-mob-collage.webp') no-repeat;
         background-size: contain;
+        }
     }
 }

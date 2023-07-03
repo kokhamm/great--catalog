@@ -890,7 +890,7 @@ a {
   }
 }
 @media (max-width: 700px) {
-  .hero {
+  .hero::before {
     background: url("../img/gc-mob-collage.webp") no-repeat;
     background-size: contain;
   }
