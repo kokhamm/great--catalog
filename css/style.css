@@ -1556,6 +1556,19 @@ a {
   align-items: center;
   gap: 8rem;
 }
+.easy__video {
+  position: relative;
+}
+.easy__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+}
 .easy__header {
   font-size: 4rem;
   font-weight: 600;

@@ -8,6 +8,19 @@
         align-items: center;
         gap: 8rem;
     }
+    &__video{
+        position: relative;
+    }
+    &__play{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 4;
+        height: 70px;
+        width: 70px;
+        cursor: pointer;
+    }
     &__header{
         font-size: 4rem;
         font-weight: 600;
