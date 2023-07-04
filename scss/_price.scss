@@ -125,6 +125,22 @@
     &__copacity{
         font-size: 6rem;
         font-weight: 300;
+        color: #A4A4A4;
+        span{
+            font-size: 4rem;
+            font-weight: 300;
+            position: relative;
+            &:after{
+            border-top: 2px solid #A4A4A4;
+            content: " ";
+            display: block;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%,0px) rotate(-18deg);
+            width: 109%;
+            }
+        }
     }
     &__for{
         color: #A4A4A4;
