@@ -864,6 +864,12 @@ a {
   }
   .hero__wrap {
     align-items: center;
+    height: initial;
+    padding-top: 4rem;
+    gap: 40rem;
+  }
+  .hero__wrap a {
+    margin-top: 14rem;
   }
   .hero::after {
     display: none;
@@ -871,14 +877,7 @@ a {
   .hero::before {
     left: 50%;
     transform: translateX(-50%);
-    top: 50%;
-  }
-  .hero__wrap {
-    height: initial;
-    padding-top: 4rem;
-  }
-  .hero__wrap a {
-    margin-top: 14rem;
+    top: 35%;
   }
   .hero__header {
     font-size: 4rem;
@@ -891,8 +890,12 @@ a {
 }
 @media (max-width: 700px) {
   .hero::before {
+    top: 50%;
     background: url("../img/gc-mob-collage.webp") no-repeat;
     background-size: contain;
+  }
+  .hero__wrap {
+    gap: 12rem;
   }
 }
 .format {
