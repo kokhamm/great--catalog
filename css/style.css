@@ -2284,6 +2284,7 @@ a {
   align-items: flex-start;
   gap: 5rem;
   background-color: #333;
+  max-width: 100vw;
 }
 #fPopup p {
   margin-bottom: 3rem;
@@ -2615,6 +2616,7 @@ a {
   align-items: flex-start;
   gap: 5rem;
   background-color: #333;
+  max-width: 100vw;
 }
 
 .input-alt:focus + .input-border-alt {
@@ -2780,6 +2782,16 @@ a {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   border-radius: 2rem;
+}
+.popup p {
+  font-family: Gilroy;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  position: absolute;
+  top: 2rem;
+  left: 3rem;
 }
 .popup img {
   width: 27.9rem;

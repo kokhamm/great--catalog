@@ -173,7 +173,7 @@
     align-items: flex-start;
     gap: 5rem;
     background-color: #333;
-
+    max-width: 100vw;
   }
   .input-alt:focus + .input-border-alt {
     width: 100%;

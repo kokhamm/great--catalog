@@ -7,6 +7,16 @@
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     border-radius: 2rem;
+    p{
+      font-family: Gilroy;
+      font-size: 3.5rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%;
+      position: absolute;
+      top: 2rem;
+      left: 3rem;
+    }
     img{
         width: 27.9rem;
         height: 24.2rem;
