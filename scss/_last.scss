@@ -163,7 +163,18 @@
     background: linear-gradient(90deg, #FF6464 0%, #FFBF59 50%, #47C9FF 100%);
     transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1.00);
   }
-  
+  #tPopup{
+    padding: 7rem 10rem;
+    border-radius: 2.5rem;
+    display: flex;
+    font-size: 3rem;
+    font-weight: 500;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5rem;
+    background-color: #333;
+
+  }
   .input-alt:focus + .input-border-alt {
     width: 100%;
   }

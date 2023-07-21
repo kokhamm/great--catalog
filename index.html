@@ -1406,7 +1406,7 @@
                         </p>
                     </div>
                     <div class="booking__form-wrap">
-                        <form action="submit-form.php" method="post">
+                        <form action="submit-form.php" method="post" id="fForm">
                             <label for="name">Ім’я</label>
                             <div class="form-control">
                                 <input class="input input-alt" name="name" placeholder="John" required type="text">
@@ -1418,20 +1418,25 @@
                                 <input class="input input-alt" name="phone" placeholder="+38 (097) 674 78 23" required type="text">
                                 <span class="input-border input-border-alt"></span>
                             </div>
-
                             <label for="email" id="bookForEmail">Email</label>
                             <div class="form-control">
                                 <input id="bookEmail" class="input input-alt" name="email" placeholder="john.johnson@gmail.com" required type="text">
                                 <span class="input-border input-border-alt"></span>
                             </div>
-                            
                             <input type="submit" value="Забронювати" class="booking__submit">
-                          </form>
+                        </form>
                     </div>
-                    
                 </div>
             </div>
         </section>
+        <!-- Popup -->
+        <div id="fPopup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <div>
+                <p>Бронювання знижки успішне!</p>
+                <span>Акційна пропозиція закріплена за вами</span>
+            </div>
+            <img src="img/cg-popup-succes.svg" alt="checkbox">
+        </div>
         <section class="faq" data-scroll-section id="faq">
             <div class="faq__container-m">
                 <div class="faq__wrap">
@@ -1527,7 +1532,7 @@
                         </p>
                     </div>
                     <div class="last__form-wrap">
-                        <form action="submit-form.php" method="post">
+                        <form id="tForm" action="submit-form.php" method="post">
                             <div class="last__superwrap">
                                 <div class="last__left">
                                     <label for="name">Ім’я</label>
@@ -1560,6 +1565,11 @@
                 </div>
             </div>
         </section>
+        <!-- Popup 2 -->
+        <div id="tPopup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <p>Бронювання знижки успішне</p>
+            <img src="img/cg-popup-succes.svg" alt="checkbox">
+        </div>
         <footer class="footer" data-scroll-section id="footer">
             <div class="footer__container-l">
                 <div class="footer__wrap">
